@@ -26,10 +26,10 @@ jobs:
       - name: Build and push backend image
         uses: docker/build-push-action@v5
         with:
-          context: ./HospitalManagement
-          file: ./HospitalManagemet/backend.Dockerfile
+          context: ./HospitalManagemnet
+          file: ./HospitalManagemnet/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-backend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-backend-latest:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -37,4 +37,4 @@ jobs:
           context: ./Hospital-Frontend
           file: ./Hospital-Frontend/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-frontend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-frontend-latest:latest
